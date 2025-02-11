@@ -53,20 +53,26 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
 # TODO здесь ваш код
+# table_code = goods['Стол']
+# table_items = store[table_code]
+# table_quantity = sum(item['quantity'] for item in table_items)
+# table_cost = sum(item['quantity'] * item['price'] for item in table_items)
+# print('Стол -', table_quantity, 'шт, стоимость', table_cost, 'руб')
+
 table_code = goods['Стол']
 table_items = store[table_code]
-table_quantity = sum(item['quantity'] for item in table_items)
-table_cost = sum(item['quantity'] * item['price'] for item in table_items)
+table_quantity = table_items[0]['quantity'] + table_items[1]['quantity']
+table_cost = (table_items[0]['quantity'] * table_items[0]['price']) + (table_items[1]['quantity'] * table_items[1]['price'])
 print('Стол -', table_quantity, 'шт, стоимость', table_cost, 'руб')
 
 sofa_code = goods['Диван']
 sofa_items = store[sofa_code]
-sofa_quantity = sum(item['quantity'] for item in sofa_items)
-sofa_cost = sum(item['quantity'] * item['price'] for item in sofa_items)
+sofa_quantity = sofa_items[0]['quantity'] + sofa_items[1]['quantity']
+sofa_cost = (sofa_items[0]['quantity'] * sofa_items[0]['price']) + (sofa_items[1]['quantity'] * sofa_items[1]['price'])
 print('Диван -', sofa_quantity, 'шт, стоимость', sofa_cost, 'руб')
 
 chair_code = goods['Стул']
 chair_items = store[chair_code]
-chair_quantity = sum(item['quantity'] for item in chair_items)
-chair_cost = sum(item['quantity'] * item['price'] for item in chair_items)
+chair_quantity = chair_items[0]['quantity'] + chair_items[1]['quantity'] + chair_items[2]['quantity']
+chair_cost = (chair_items[0]['quantity'] * chair_items[0]['price']) + (chair_items[1]['quantity'] * chair_items[1]['price']) + (chair_items[2]['quantity'] * chair_items[2]['price'])
 print('Стул -', chair_quantity, 'шт, стоимость', chair_cost, 'руб')

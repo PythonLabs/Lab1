@@ -23,7 +23,3 @@ for city1, (x1, y1) in sites.items():
             distances[city1][city2] = distance
 
 print(distances)
-
-
-
-

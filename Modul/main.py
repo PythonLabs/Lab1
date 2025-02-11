@@ -1,5 +1,3 @@
-# main.py
-
 from shops_logic import get_cheapest_prices
 from output_logic import print_prices
 

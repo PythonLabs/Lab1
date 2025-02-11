@@ -1,9 +1,7 @@
 # shops_logic.py
 
 def get_cheapest_prices(shops):
-    """
-    Возвращает словарь с минимальными ценами на каждый товар из двух магазинов.
-    """
+    # Возвращает словарь с минимальными ценами на каждый товар из двух магазинов.
     sweets = {}
     for shop, items in shops.items():
         for item in items:
